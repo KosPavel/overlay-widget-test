@@ -10,12 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION))
-        }
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+//            startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION))
+//        }
 
         val intent = Intent(this, OverlayWidgetService::class.java)
         startService(intent)
-        finish()
+//        finish()
     }
 }

@@ -137,7 +137,8 @@ class OverlayWidgetService : Service(), View.OnTouchListener, View.OnClickListen
 
     private fun getScreenshot() {
         val mpm = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
-        startActivity()
+//        startActivity()
+        val w = getSystemService(Context.WINDOW_SERVICE) as WindowManager
     }
 
     override fun onClick(v: View?) {
