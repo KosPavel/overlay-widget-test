@@ -13,12 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Overlaywidgettest">
 
-        <receiver android:name=".BootReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
         <activity android:name=".MainActivity" android:theme="@style/Theme.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".DrawActivity" android:theme="@style/Theme.Transparent"/>
+        <activity android:name=".ScreenshotActivity" android:theme="@style/Theme.Transparent"/>
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <service
             android:name=".OverlayWidgetService"

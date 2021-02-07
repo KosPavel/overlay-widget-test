@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         //TODO почему-то всегда возвращает DENIED
         if (ContextCompat.checkSelfPermission(
                 this,
