@@ -12,10 +12,10 @@ class DrawActivity : AppCompatActivity() {
 
     private lateinit var mediaProjectionManager: MediaProjectionManager
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.i("qwerty", "DrawActivity onCreate")
         setContentView(R.layout.activity_draw)
-
         mediaProjectionManager =
             getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
 
@@ -31,7 +31,10 @@ class DrawActivity : AppCompatActivity() {
         //TODO result from screenshotActivity
         Log.i("qwerty", "result came, data = ${data.toString()}")
         val mediaProjection = mediaProjectionManager.getMediaProjection(resultCode, data!!)
-        mediaProjection.
+        startService(
+            Intent(this, MediaProjection::class.java)
+        )
+//        mediaProjection.
     }
 
     companion object {
