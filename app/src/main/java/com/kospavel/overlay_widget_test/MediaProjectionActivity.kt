@@ -4,18 +4,17 @@ import android.content.Context
 import android.content.Intent
 import android.media.projection.MediaProjectionManager
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
-class DrawActivity : AppCompatActivity() {
+class MediaProjectionActivity : AppCompatActivity() {
 
     private lateinit var mediaProjectionManager: MediaProjectionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i("qwerty", "DrawActivity onCreate")
-        setContentView(R.layout.activity_draw)
+        setContentView(R.layout.activity_main)
         mediaProjectionManager =
             getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
 
@@ -32,7 +31,7 @@ class DrawActivity : AppCompatActivity() {
         Log.i("qwerty", "result came, data = ${data.toString()}")
         val mediaProjection = mediaProjectionManager.getMediaProjection(resultCode, data!!)
         startService(
-            Intent(this, MediaProjection::class.java)
+            Intent(this, MediaProjectionService::class.java)
         )
 //        mediaProjection.
     }

@@ -13,11 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Overlaywidgettest">
         <service
-            android:name=".MediaProjection"
+            android:name=".MediaProjectionService"
             android:enabled="true"
-            android:exported="false"></service>
-
-        <activity android:name=".MainActivity2" />
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.Transparent">
@@ -28,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DrawActivity"
+            android:name=".MediaProjectionActivity"
             android:theme="@style/Theme.Transparent" />
         <activity
             android:name=".ScreenshotActivity"

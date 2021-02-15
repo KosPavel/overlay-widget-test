@@ -5,7 +5,7 @@ import android.content.Intent
 import android.content.pm.ServiceInfo
 import android.os.IBinder
 
-class MediaProjection : Service() {
+class MediaProjectionService : Service() {
 
     override fun onBind(intent: Intent): IBinder {
         TODO("Return the communication channel to the service.")

@@ -64,7 +64,7 @@ class OverlayWidgetService : Service(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         Toast.makeText(this, "Overlay button click event", Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this, DrawActivity::class.java).apply {
+        startActivity(Intent(this, MediaProjectionActivity::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         })
     }
